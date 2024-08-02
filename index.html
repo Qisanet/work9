@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        ul {
+            list-style-type: none; /* Remove default bullets */
+       
+            background-color: yellow;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 25px; /* Space for the square bullet */
+            color: rgb(0, 0, 0); /* Text color */
+        }
+
+        ul li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px; /* Size of the square */
+            height: 8px;
+            background-color: red; /* Square color */
+            /* Optional: add slight rounding */
+        }
+    #link{
+        border:5px solid green;
+        color:black;
+        background-color: green;
+
+    }
+    #link:hover{
+        background-color:white;
+    }
+    .ul{
+        background-color: yellow;
+       
+       
+    
+    
+    }
+    #image{
+        width: 200px;
+        height: 300px;
+        z-index: -1;
+        position: absolute;
+    }
+    
+    #h1{
+        font-size: 66px;
+        z-index: 2;
+      
+ 
+
+    }
+    #p1{
+        font-size: 36px;
+        padding-top: 25px;
+    }
+    #SpamInline{
+        background-color:yellow;
+        display: inline;
+        border: 2px solid black;
+    }
+    #SpamBlock{
+        background-color: yellow;
+        border: 2px solid rgb(0, 0, 0);
+        height: 150px;
+        width: 150px;
+        display: inline-block;
+        padding-left: 15px;
+        padding-top: 15px;
+        
+    }
+    #SpamInlineBlock{
+        background-color: yellow;
+        border: 2px solid rgb(0, 0, 0);
+        height: 150px;
+        width: 150px;
+        display: block;
+        padding-left: 15px;
+        padding-top: 15px;
+        
+    }
+    
+    </style>
+    <h2>before hover and after hover</h2>
+    <a id="link" href="#">This is a link</a>
+    <ul class="ul">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+    <div id="imagetext">
+    <img src="images.jpg" alt="image" id="image">
+    <div id="h1">This is a heading</div>
+    <div id="p1">Because the image has a z-index of -1,it will be placed behind the text</div>
+    </div><br><br><br><br><br><br><br><br><br>
+    <div>
+    <h1> The Display Property</h1>
+    <h2>display: inline</h2>
+    <p>this is text this is text this is text <spam id="SpamInline">hello</spam> <spam id="SpamInline">there</spam> this is text this is text this is text</p>
+    </div>
+    <h2>display: inline-block</h2>
+    <p>this is text this is text this is text <spam id="SpamBlock">hello</spam> <spam id="SpamBlock">there</spam>  this is text this is text this is text</p>
+
+    <h2>display: block</h2>
+    <p>this is text this is text this is text<br> <spam id="SpamInlineBlock">hello</spam> <spam id="SpamInlineBlock">  there</spam>   this is text this is text this is text</p>
+</div>
+</body>
+</html>
